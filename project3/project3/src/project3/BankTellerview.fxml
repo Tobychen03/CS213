@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="724.0" prefWidth="866.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project3.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Bank System">
+      <font>
+         <Font size="21.0" />
+      </font></Label>
+   <TabPane prefHeight="382.0" prefWidth="826.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab id="page1" fx:id="page1" text="Open/Close">
+            <content>
+               <AnchorPane prefHeight="236.0" prefWidth="826.0">
+                  <children>
+                     <GridPane layoutX="53.0" layoutY="6.0" prefHeight="323.0" prefWidth="720.0">
+                       <columnConstraints>
+                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.40000915527344" minWidth="10.0" prefWidth="91.99998779296874" />
+                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.9999755859375" minWidth="10.0" prefWidth="283.20001220703125" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.19998779296878" minWidth="6.000036621093784" prefWidth="216.19998779296878" />
+                       </columnConstraints>
+                       <rowConstraints>
+                         <RowConstraints maxHeight="91.60001220703126" minHeight="10.0" prefHeight="54.20000381469727" vgrow="SOMETIMES" />
+                         <RowConstraints maxHeight="65.59997787475587" minHeight="10.0" prefHeight="61.79999999999999" vgrow="SOMETIMES" />
+                         <RowConstraints maxHeight="59.199981689453125" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="113.59999389648436" minHeight="10.0" prefHeight="110.39998168945311" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="113.59999389648436" minHeight="10.0" prefHeight="110.39998168945311" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="70.39998168945311" minHeight="8.800000000000011" prefHeight="48.000018310546864" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                        <children>
+                           <Label text="First Name" />
+                           <Label text="Last Name" GridPane.rowIndex="1" />
+                           <Label text="Date of Birth" GridPane.rowIndex="2" />
+                           <Label text="Account Type" GridPane.rowIndex="3" />
+                           <TextField id="firstname1" fx:id="firstname1" promptText="enter first name" GridPane.columnIndex="1" />
+                           <TextField id="lastname1" fx:id="lastname1" promptText="enter last name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <DatePicker id="dob1" fx:id="dob1" prefHeight="23.0" prefWidth="242.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <GridPane prefHeight="50.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                             <columnConstraints>
+                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.6000244140625" minWidth="10.0" prefWidth="184.00003662109376" />
+                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.39998779296874" minWidth="10.0" prefWidth="183.99996337890624" />
+                             </columnConstraints>
+                             <rowConstraints>
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                             </rowConstraints>
+                              <children>
+                                 <RadioButton id="checking1" fx:id="checking1" mnemonicParsing="false" onAction="#showcampus" selected="true" text="Checking">
+                                    <toggleGroup>
+                                       <ToggleGroup fx:id="AccountType" />
+                                    </toggleGroup>
+                                 </RadioButton>
+                                 <RadioButton id="collegechecking1" fx:id="collegechecking1" mnemonicParsing="false" onAction="#showcampus" text="College Checking" toggleGroup="$AccountType" GridPane.columnIndex="1" />
+                                 <RadioButton id="saving1" fx:id="saving1" mnemonicParsing="false" onAction="#showcampus" text="Saving" toggleGroup="$AccountType" GridPane.rowIndex="1" />
+                                 <RadioButton id="moneymarket1" fx:id="moneymarket1" mnemonicParsing="false" onAction="#showcampus" text="Money Market" toggleGroup="$AccountType" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              </children>
+                           </GridPane>
+                           <HBox alignment="CENTER" prefHeight="74.0" prefWidth="368.0" spacing="80.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <children>
+                                 <Button id="open" fx:id="open" mnemonicParsing="false" onAction="#open" prefHeight="23.0" prefWidth="200.0" text="Open" />
+                                 <Button id="close" fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="23.0" prefWidth="200.0" text="Close" />
+                              </children>
+                           </HBox>
+                           <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <children>
+                                 <RadioButton id="newbrunswick" fx:id="newbrunswick" disable="true" mnemonicParsing="false" text="New Brunswick">
+                                    <toggleGroup>
+                                       <ToggleGroup fx:id="Campus" />
+                                    </toggleGroup></RadioButton>
+                                 <RadioButton id="newark" fx:id="newark" disable="true" mnemonicParsing="false" text="Newark" toggleGroup="$Campus" />
+                                 <RadioButton id="camden" fx:id="camden" disable="true" mnemonicParsing="false" text="Camden" toggleGroup="$Campus" />
+                                 <CheckBox id="loyal" fx:id="loyal" disable="true" mnemonicParsing="false" text="Loyal" />
+                              </children>
+                           </VBox>
+                           <Label text="Amount(only for open)" GridPane.rowIndex="4" />
+                           <TextField id="openamount" fx:id="amount1" promptText="Deposit money when open account" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        </children>
+                     </GridPane>
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+       <Tab id="page2" fx:id="page2" text="Deposit/Withdraw">
+            <content>
+               <AnchorPane prefHeight="362.0" prefWidth="826.0">
+                  <children>
+                     <GridPane layoutX="53.0" layoutY="-3.0" prefHeight="327.0" prefWidth="720.0">
+                        <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.40000915527344" minWidth="10.0" prefWidth="91.99998779296874" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.9999755859375" minWidth="10.0" prefWidth="283.20001220703125" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.19998779296878" minWidth="6.000036621093784" prefWidth="216.19998779296878" />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints maxHeight="54.60001220703125" minHeight="10.0" prefHeight="40.40000610351562" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="52.399993896484375" minHeight="10.0" prefHeight="42.40000610351562" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="46.19999389648436" minHeight="10.0" prefHeight="46.19999389648436" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="56.79998168945312" minHeight="10.0" prefHeight="45.20001831054688" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="70.4" minHeight="10.0" prefHeight="36.00000610351563" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="43.400000000000006" minHeight="6.599999999999994" prefHeight="40.99999389648437" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                           <Label text="First Name" />
+                           <Label text="Last Name" GridPane.rowIndex="1" />
+                           <Label text="Date of Birth" GridPane.rowIndex="2" />
+                           <Label text="Account Type" GridPane.rowIndex="3" />
+                           <TextField id="firstname2" fx:id="firstname2" promptText="enter first name" GridPane.columnIndex="1" />
+                           <TextField id="lastname2" fx:id="lastname2" promptText="enter last name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <DatePicker id="dob2" fx:id="dob2" prefHeight="23.0" prefWidth="242.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <GridPane prefHeight="50.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <columnConstraints>
+                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.6000244140625" minWidth="10.0" prefWidth="184.00003662109376" />
+                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.39998779296874" minWidth="10.0" prefWidth="183.99996337890624" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                              <children>
+                                 <RadioButton id="checking2" fx:id="checking2" mnemonicParsing="false" selected="true" text="Checking">
+                                    <toggleGroup>
+                                       <ToggleGroup fx:id="AccountType1" />
+                                    </toggleGroup>
+                                 </RadioButton>
+                                 <RadioButton id="collegechecking2" fx:id="collegechecking2" mnemonicParsing="false" text="College Checking" toggleGroup="$AccountType1" GridPane.columnIndex="1" />
+                                 <RadioButton id="saving2" fx:id="saving2" mnemonicParsing="false" text="Saving" toggleGroup="$AccountType1" GridPane.rowIndex="1" />
+                                 <RadioButton id="moneymarket2" fx:id="moneymarket2" mnemonicParsing="false" text="Money Market" toggleGroup="$AccountType1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              </children>
+                           </GridPane>
+                           <HBox alignment="CENTER" prefHeight="48.0" prefWidth="368.0" spacing="80.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <children>
+                                 <Button id="deposit" fx:id="deposit" mnemonicParsing="false" onAction="#deposit" prefHeight="23.0" prefWidth="200.0" text="Deposit" />
+                                 <Button id="withdraw" fx:id="withdraw" mnemonicParsing="false" onAction="#withdraw" prefHeight="23.0" prefWidth="200.0" text="Withdraw" />
+                              </children>
+                           </HBox>
+                           <Label text="Amount" GridPane.rowIndex="4" />
+                           <TextField id="amount" fx:id="amount2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        </children>
+                     </GridPane>
+                  </children></AnchorPane>
+            </content>
+         </Tab>
+         <Tab id="page3" fx:id="page3" text="Account Database">
+            <content>
+               <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <GridPane layoutX="149.0" layoutY="14.0" prefHeight="246.0" prefWidth="527.0">
+                       <columnConstraints>
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                        <children>
+                           <Button id="print" fx:id="print" mnemonicParsing="false" onAction="#print" prefHeight="40.0" prefWidth="230.0" text="Print All Acconuts">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                           <Button id="calculate-interests-fees" fx:id="calculate_interests_fees" mnemonicParsing="false" onAction="#calculate_interests_fees" prefHeight="40.0" prefWidth="230.0" text="Calculate interests and Fees" GridPane.columnIndex="1">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                           <Button id="print-type" fx:id="print_type" mnemonicParsing="false" onAction="#print_type" prefHeight="40.0" prefWidth="230.0" text="Print All Accounts by Types" GridPane.rowIndex="1">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                           <Button id="apply-interests-fees" fx:id="apply_interests_fees" mnemonicParsing="false" onAction="#apply_interests_fees" prefHeight="40.0" prefWidth="230.0" text="Apply interests and Fees" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                        </children>
+                     </GridPane>
+                  </children>
+               </AnchorPane>
+            </content></Tab>
+     </tabs>
+   </TabPane>
+   <TextArea id="board" fx:id="board" prefHeight="161.0" prefWidth="826.0" />
+</VBox>
