@@ -1,0 +1,1 @@
+packageSearchIndex = [{"m":"com.example.project4","l":"com.example.project4"},{"m":"com.example.project4","l":"com.example.project4.bean"},{"m":"com.example.project4","l":"com.example.project4.inter"},{"m":"com.example.project4","l":"com.example.project4.util"},{"l":"所有程序包","u":"allpackages-index.html"}];updateSearchResults();
