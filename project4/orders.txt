@@ -1,0 +1,3 @@
+Number of Order: 1, Number of item: 1, sub Price: 1.99, tax: 0.13, total: 2.12, Information: 
+Coffee(1)Short[cream], price: 1.99
+

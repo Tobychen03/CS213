@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.ordersController">
+   <children>
+      <Label text="Store Orders">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
+         <children>
+            <ComboBox fx:id="oredernumber" onAction="#selectOrder" prefWidth="150.0" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="245.0" spacing="10.0">
+               <children>
+                  <Label text="total">
+                     <font>
+                        <Font  size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField  fx:id="total_price"  />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ListView fx:id="order_info" prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#cancelOrder" prefHeight="30.0" prefWidth="100.0" text="Cancel Order" />
+            <Button mnemonicParsing="false" onAction="#exportOrders" prefHeight="30.0" prefWidth="100.0" text="Export Orders" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

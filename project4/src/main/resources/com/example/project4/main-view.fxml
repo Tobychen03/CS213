@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: e0ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.mainController">
+   <top>
+      <Label prefHeight="94.0" prefWidth="246.0" text="Rutgers Cafe" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <VBox prefHeight="389.0" prefWidth="374.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="orderdonuts" contentDisplay="TOP" mnemonicParsing="false" onAction="#donutsbutton" text="Order this">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@donut-g9d61c05d2_1920.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="ordercoffee" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#coffeebutton" text="Order this">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cappuccino-g93d69f8fe_1920.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="161.0" prefWidth="800.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="orderbasket" contentDisplay="TOP" mnemonicParsing="false" onAction="#basketbutton" text="Your Order">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@shopping-cart-g985e9473f_1920.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="storeorder" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#storebutton" text="Store Order">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@billing-machine-g734b97e7b_1280.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
