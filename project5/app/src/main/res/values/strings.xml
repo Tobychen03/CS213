@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Project5</string>
+    <string name="main_text">Rutgers Coffee</string>
+    <string name="button_donuts">Order Donut</string>
+    <string name="button_coffee">Order Coffee</string>
+    <string name="button_order">Your Order</string>
+    <string name="button_store">Store Order</string>
+    <string name="title_activity_order_donuts">order_donuts</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Cream">Cream</string>
+    <string name="Milk">Milk</string>
+    <string name="Whipped_Cream">Whipped Cream</string>
+    <string name="Syrup">Syrup</string>
+    <string name="Caramel">Caramel</string>
+    <string name="add">Add Order</string>
+    <string name="title_order">Your Order</string>
+    <string name="sub_total">sub-total</string>
+    <string name="sales_tax">sales tax</string>
+    <string name="total">total</string>
+    <string name="delete">Delete Item</string>
+    <string name="place_order">Place Order</string>
+    <string name="order_number">Order Index</string>
+    <string name="delete_order">Delete Order</string>
+    <string name="describe_donuts">donuts</string>
+    <string name="describe_coffee">coffee</string>
+    <string-array name="donuts_Names">
+        <item>jelly</item>
+        <item>glazed</item>
+        <item>chocolate frosted</item>
+        <item>strawberry frosted</item>
+        <item>sugar</item>
+        <item>lemon filled</item>
+        <item>cinnamon sugar</item>
+        <item>old fashion</item>
+        <item>blueberry</item>
+        <item>glazed holes</item>
+        <item>jelly holes</item>
+        <item>cinnamon sugar holes</item>
+    </string-array>
+</resources>

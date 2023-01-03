@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/order_donuts"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="showDonuts"
+        android:text="@string/button_donuts"
+        app:layout_constraintBottom_toTopOf="@+id/order_coffee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/order_coffee"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="showCoffee"
+        android:text="@string/button_coffee"
+        app:layout_constraintBottom_toTopOf="@+id/your_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/your_order"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="showOrder"
+        android:text="@string/button_order"
+        app:layout_constraintBottom_toTopOf="@+id/store_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/store_order"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="80dp"
+        android:onClick="showStore"
+        android:text="@string/button_store"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="140dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/main_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/order_donuts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+</androidx.constraintlayout.widget.ConstraintLayout>
